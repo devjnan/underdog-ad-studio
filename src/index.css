@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Enhanced design system with modern creative theme */
+/* Sophisticated design system with minimal color palette */
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -76,8 +76,19 @@
   }
 }
 
-/* Enhanced animations and effects */
+/* Refined animations and effects */
 @keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
   from {
     opacity: 0;
     transform: translateY(30px);
@@ -88,47 +99,27 @@
   }
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
   }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(147, 51, 234, 0.6);
-  }
-}
-
-@keyframes pulse-color {
-  0%, 100% {
-    background-color: rgba(147, 51, 234, 0.1);
-  }
-  50% {
-    background-color: rgba(236, 72, 153, 0.2);
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
 .animate-fade-in {
-  animation: fade-in 0.8s ease-out forwards;
+  animation: fade-in 0.6s ease-out forwards;
 }
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out forwards;
 }
 
-.animate-glow {
-  animation: glow 2s ease-in-out infinite;
-}
-
-.animate-pulse-color {
-  animation: pulse-color 3s ease-in-out infinite;
+.animate-scale-in {
+  animation: scale-in 0.5s ease-out forwards;
 }
 
 /* Smooth scrolling */
@@ -136,90 +127,59 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - minimal design */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1e293b;
+  background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #8b5cf6, #ec4899);
-  border-radius: 4px;
+  background: #000;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #7c3aed, #db2777);
+  background: #333;
 }
 
-/* Enhanced hover effects */
+/* Refined hover effects */
 .hover-lift {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover-lift:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Text effects */
-.text-glow {
-  text-shadow: 0 0 20px rgba(147, 51, 234, 0.5);
+/* Typography enhancements */
+.text-balance {
+  text-wrap: balance;
 }
 
-/* Backdrop blur utility */
-.backdrop-blur-xl {
-  backdrop-filter: blur(24px);
+/* Image filters */
+.filter-bw {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
 }
 
-/* Line clamp utility */
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.filter-bw:hover {
+  filter: grayscale(0%);
 }
 
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-/* Gradient text utilities */
-.gradient-text {
-  background: linear-gradient(45deg, #8b5cf6, #ec4899);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Interactive elements */
-.interactive-card {
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.interactive-card:hover {
-  transform: translateY(-5px) rotate(1deg);
-  box-shadow: 0 15px 35px rgba(147, 51, 234, 0.3);
-}
-
-/* Loading animations */
-@keyframes shimmer {
-  0% {
-    background-position: -200px 0;
+/* Subtle animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
   }
-  100% {
-    background-position: calc(200px + 100%) 0;
+  50% {
+    transform: translateY(-10px);
   }
 }
 
-.shimmer {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200px 100%;
-  animation: shimmer 1.5s infinite;
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
