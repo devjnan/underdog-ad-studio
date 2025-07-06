@@ -1,19 +1,19 @@
 
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import StatsBar from "@/components/StatsBar";
-import CategoryFilter from "@/components/CategoryFilter";
-import FeaturedProjects from "@/components/FeaturedProjects";
+import InteractiveStats from "@/components/InteractiveStats";
+import CreativeCategories from "@/components/CreativeCategories";
+import FeaturedShowcase from "@/components/FeaturedShowcase";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-slate-900">
       <Header />
       <HeroSection />
-      <StatsBar />
-      <CategoryFilter />
-      <FeaturedProjects />
+      <InteractiveStats />
+      <CreativeCategories />
+      <FeaturedShowcase />
       <Footer />
     </div>
   );
